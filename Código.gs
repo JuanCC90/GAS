@@ -16,40 +16,38 @@ function cuentaColores() {
     
     var fila = i +1;
     var color = hojaprueba.getRange(fila, 1).getBackground();
-
-   /* 
-    if(i>0){
-      
-      if(nColores
-      
-      
+ 
+    if(i<1){
+     nColores.push(color); 
       
     }else{
       
-      nColores.push(color);
+      if(nColores.indexOf(color)<0){
+        nColores.push(color);
+      }
       
     }
     
-  */  
-  /*  Logger.log("Valor: "+valor);*/
-    
+  }
+  
    
+  var sh= SpreadsheetApp.openById("1GiIBzRH28Yj7a1OswYItkiKLGamuSNpngd1iVh_YzyI");
+  var sheet=sh.getSheetByName("PRUEBA GAS");
+  
+  for(i=0;i<nColores.length;i++){
     
+    SpreadsheetApp.getActiveSpreadsheet().insertSheet(nColores[i]);
     
-    
-    
-    
-    
-    
-   
     
   }
   
-  Logger.log(nColores);
+
   
  /* 
  Browser.msgBox(aprobados);
   Browser.msgBox(suspensos);
   */
+  
+  Logger.log(nColores);
   
 }
