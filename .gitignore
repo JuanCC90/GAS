@@ -1,5 +1,11 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+# eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
